@@ -4,16 +4,17 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 app.use(require("./Routes"));
 
 mongoose.connect(
     process.env.MONGODB_URI || 'mongodb://localhost/takemytime_IPA',
     {
-        useFindAndModify: false,
-        useNewUrlParse: true,
+        // useFindAndModify: false,
+        useNewUrlParser: true,
         useUnifiedTopology: true,
+        
     }
 );
 
