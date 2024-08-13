@@ -24,6 +24,29 @@ const userController = {
         .then((dbUserData) => res.json(dbUserData))
         .catch((err) => res.status(400).json(err));
     },
+
+    //get one user by ID
+    getUserById(req, res) {
+        User.findOne({_id: req.params.id})
+        .populate({
+            path: "thoughts",
+            select: "-__v",
+        })
+        .select("-__v")
+        .then((dbUserData) => {
+            //If not user is found
+            if (!dbUserData) {
+                res.status(404).json({ message: "Not user found with this ID"});
+                return;
+            }
+            res.json(dbUserData);
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(400).json(err);
+        });
+
+    },
 };
 
 module.exports = userController;
