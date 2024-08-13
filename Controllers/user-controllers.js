@@ -26,11 +26,11 @@ const userController = {
     },
 
     //get one user by ID
-    getUserById(req, res) {
-        User.findOne({_id: req.params.id})
+    getUserById({ params }, res) {
+        User.findOne({ _id: params.id })
         .populate({
-            path: "thoughts",
-            select: "-__v",
+          path: "thoughts",
+          select: "-__v",
         })
         .select("-__v")
         .then((dbUserData) => {
