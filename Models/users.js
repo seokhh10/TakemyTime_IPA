@@ -17,18 +17,18 @@ const userSchema = new Schema({
       'Please, enter a valid email address!',
     ],
   },
-  // thoughts: [
-  //   {
-  //     type: Schema.Types.ObjectId,
-  //     ref: 'Thought',
-  //   },
-  // ],
-  // friends: [
-  //   {
-  //     type: Schema.Types.ObjectId,
-  //     ref: 'User',
-  //   },
-  // ],
+  thoughts: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Thought',
+    },
+  ],
+  friends: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+    },
+  ],
 },
 
   {
