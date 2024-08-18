@@ -4,6 +4,7 @@ const {
     getAllThoughts,
     createThought,
     updateThought,
+    deleteThought,
 
 } = require('../../Controllers/thought-controllers');
 
@@ -13,8 +14,8 @@ router.route('/').get(getAllThoughts);
 //POST create a /api/thoughts/:userId 
 router.route('/:userId').post(createThought);
 
-//
-router.route('/:id').put(updateThought);
+//Update, Delete
+router.route('/:id').put(updateThought).delete(deleteThought);
 
 
 
