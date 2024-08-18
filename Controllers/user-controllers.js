@@ -72,6 +72,16 @@ const userController = {
         })
         .catch((err) => res.status(400).json(err));
     },
+    //add a friend
+    addFriend({ params }, res) {
+        User.findOneAndUpdate(
+            { _id: params.id },
+            { $addToSet: { friends: params.friendsId } },
+            { new: true }
+        )
+        .then((dbUserData) => res.json(dbUserData))
+        .catch((err) => res.status(400).json(err));
+    },
 };
 
 module.exports = userController;
