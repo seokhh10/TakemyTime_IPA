@@ -10,11 +10,7 @@ app.use(require("./Routes"));
 
 mongoose.connect(
     process.env.MONGODB_URI || 'mongodb://localhost/takemytime_IPA',
-    {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        
-    }
+    
 );
 
 //log mongo queries being used
