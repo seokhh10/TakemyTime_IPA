@@ -1,5 +1,5 @@
 const { User } = require("../Models");
-const { populate } = require("../Models/users")
+const { populate } = require("../Models/User")
 
 const userController = {
     //get all users
