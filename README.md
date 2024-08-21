@@ -3,7 +3,9 @@
    
    ## Description 
    
-   An API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.
+   This project is a dynamic social network web application designed to facilitate interaction and connection among users. Through this platform, users can create personal profiles, share their thoughts in the form of posts, react to content shared by their friends, and manage a list of friends. The application provides a robust and scalable backend built using Express.js, while leveraging MongoDB and Mongoose ODM to efficiently manage and query data. This application is structured to handle a large number of users and interactions, providing fast and reliable responses via RESTful API endpoints. It is designed to serve as a foundation for a fully functional social networking site, offering key features that enhance user engagement and community building.
+
+
    
    ## Table of Contents  
    - [Features](#features)
