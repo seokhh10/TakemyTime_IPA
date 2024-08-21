@@ -37,7 +37,7 @@
 
    ## Video
    
-   Link to video: 
+   Link to video: https://youtu.be/fdwxwXg_Ym8
 
    ## Contributors
 
